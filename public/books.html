@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Data</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: blue;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .button_box{
+            width: 300px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Book Data</h1>
+    <div class="button_box">
+        <button id="sortButton" onclick="sortTableById()">Sort by ID Ascending</button>
+        <p></p>
+        <button id="sortRatingButton" onclick="sortTableByRating()">Sort by Rating Ascending</button>
+    </div>
+
+
+    <table id="bookTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Author</th>
+                <th>Description</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody id="bookTableBody">
+            <!-- Data will be inserted here -->
+        </tbody>
+    </table>
+
+    <script src="./js/books.js" type="text/javascript"></script>
+</body>
+</html>
