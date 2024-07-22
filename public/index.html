@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
   <title>Submitting Form Data Example</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+  </style>
 </head>
- 
+
 <body>
-  <h1>Contact Us </h1>
+  <!-- <h1>Contact Us </h1>
   <form id="contactForm">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required><br><br>
@@ -16,6 +26,10 @@
     <textarea id="message" name="message" required></textarea><br><br>
     <button type="submit">Submit</button>
   </form>
-  <script src="./js/script.js" type="text/javascript"></script>
+  <script src="./js/script.js" type="text/javascript"></script> -->
+  <canvas id="myCanvas" width="800" height="600" style="border: 1px solid #000000"></canvas>
+  <button onclick="clearCanvas()">Clear Canvas</button>
+  <!-- <script type="text/javascript" src="./js/canvas.js"></script> -->
+  <script type="text/javascript" src="./js/drag.js"></script>
 </body>
 </html>
