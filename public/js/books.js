@@ -53,3 +53,9 @@ function sortTableByRating() {
     ascendingRating = !ascendingRating;
     document.getElementById('sortRatingButton').textContent = ascendingRating ? 'Sort by Rating Ascending' : 'Sort by Rating Descending';
 }
+
+document.getElementById('logoutButton').addEventListener('click', () => {
+   
+    window.location.href = '/login';
+       
+});

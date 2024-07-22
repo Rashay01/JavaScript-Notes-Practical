@@ -154,3 +154,9 @@ function editRow(id, name, author, description, rating) {
     document.getElementById('updateRating').value = rating;
     editingBookId = id;
 }
+
+document.getElementById('logoutButton').addEventListener('click', () => {
+   
+    window.location.href = '/login';
+       
+});

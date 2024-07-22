@@ -9,6 +9,7 @@ const userRoutes = require('./routes/userRoutes');
 const bookRoutes = require('./routes/bookRoutes');
 const dynamicWebpageRoutes = require('./routes/dynamicWebpageRoutes');
 const formRoutes = require('./routes/formRoutes');
+const usersRoutes = require('./routes/usersRoutes');
 const app = express();
 const port = 3000;
 
@@ -31,11 +32,20 @@ app.use((req, res, next) => {
  
  
 app.use('/weather', weatherRoutes);
-app.use('/user', userRoutes);
+app.use('/user', usersRoutes);
 // app.use('/', dynamicWebpageRoutes);
 app.use('/submit-form', formRoutes);
 app.use('/book-form', bookRoutes);
 app.use('/', express.static(path.join(__dirname, 'public')));
+app.get('/books', (req, res) => {
+    res.sendFile(path.join(__dirname,'public','books.html'))
+})
+app.get('/books-admin', (req, res) => {
+    res.sendFile(path.join(__dirname,'public','books-admin.html'))
+})
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname,'public','login.html'))
+})
  
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
